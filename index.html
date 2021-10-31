@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color: rgb(238, 235, 224);
+            transition: all 1s;
+            margin: 0;
+            height: 2500px;
+            width: 100%;
+
+        }
+        .wrapper{
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .arrow-up {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 70px;
+            height: 70px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(88, 133, 255);
+            border-radius: 50%;
+            text-align: center;
+            opacity: 1;
+        }
+        .arrow-up span {
+            line-height: 70px;
+            font-size: 50px;
+        }
+        .arrow-up.visible {
+            opacity: 2;
+        }
+        .bgcolor--blue{
+            background-color: rgb(204, 224, 243);
+
+        }
+        .bgcolor--gray{
+            background-color: rgb(114, 114, 114);
+        }
+        .bgcolor--works{
+            background-color: rgb(238, 238, 238);
+        }
+        .bg--img {
+            background: url('beach.jpg');
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            transition: all 1s;
+            opacity: 0;
+            background-repeat: no-repeat;
+            
+        }
+        .bg__img--show {
+            opacity: 1;
+        }
+        button {
+            width: 120px; 
+            height: 45px; 
+            background-color: rgb(92, 92, 92);
+            border-radius: 20px; 
+            border: none;
+            line-height: 20px;
+            color: white;
+            font-size: 15px;
+            font-family: '나눔스퀘어';
+            transition: all 0.5s;
+            cursor: grab;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-top: 2px;
+        }
+        
+        .btns{
+            position: fixed;
+            width: 100%;
+            height: 75px;
+            margin: auto;
+            text-align: center;
+            background-color: transparent;
+            transition: 0.5s;
+            padding-top: 30px;
+
+        }
+        .btn_toggle{
+        background-color: rgb(139, 182, 218);
+        }
+        .btn_toggle:hover{
+            background-color: rgb(74, 117, 197);
+        }
+        .btn--reset{
+            background-color: rgb(247, 115, 115);
+            
+            color: rgb(253, 253, 253);
+        }
+        .btn--reset:hover{
+            background-color: rgb(226, 55, 55);
+            color: rgb(250, 250, 250);
+        }
+        .btn--bggray {
+            background-color: rgb(170, 170, 170);
+        }
+        .btn--bggray:hover{
+            background-color: rgb(117, 117, 117);
+        }
+        .btn--works {
+            background-color: rgb(108, 197, 113);
+        }
+        .btn--works:hover{
+            background-color: rgb(62, 153, 67);
+        }
+        .btn--contact {
+            background-color: rgb(252, 154, 62);
+            color: rgb(255, 255, 255);
+        }
+        .btn--contact:hover{
+            background-color: rgb(255, 214, 78);
+        }
+
+        .btns.bgshow {
+            background-color: rgba(167, 167, 167, 0.466);
+        }
+        section{
+            width: 100%;
+            text-align: center;
+        }
+
+        
+
+        #home{
+            text-align: center;
+        }
+
+
+        h1{
+            color: rgb(73, 124, 219);
+            font-size: 48px;
+            font-family: 'Noto-Sans KR';
+            font-weight: 500;
+            padding-top: 200px;
+        }
+        h2{
+            font-size: 25px;
+            font-family: 'Noto-Sans KR';
+            font-weight: 400;
+        }
+        h3{
+            font-size: 18px;
+            font-weight: 300;
+        }
+    
+    </style>
+</head>
+<body class="bgcolor--blue">
+    <div class="bg__img--show bg--img"></div>
+    <div class="btns bgshow">
+        <div class="container">
+            <div class="btns__menu">
+                <button class="btn_toggle">home</button>
+                <button class="btn--reset">About</button>
+                <button class="btn--bggray">Skills</button>
+                <button class="btn--works">Works</button>
+                <button class="btn--contact">Contact Me</button>    
+            </div>
+        </div>
+    </div>
+
+    <button class="arrow-up">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <section id="home">
+        <div class="wrapper">
+            <h1>Home</h1>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, optio!</h3>
+        </div>
+    </section>
+    <section id="about">
+        <div class="wrapper">
+            <h1>About</h1>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, optio!</h3>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="wrapper">
+            <h1>Skills</h1>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, optio!</h3>
+        </div>
+    </section>
+    <section id="works">
+        <div class="wrapper">
+            <h1>Works</h1>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, optio!</h3>
+        </div>
+    </section>
+
+
+    <script>
+        const home = document.querySelector('#home');
+        const about = document.querySelector('#about');
+        const skills = document.querySelector('#skills');
+        const works = document.querySelector('#works');
+
+        const btnToggle = document.querySelector('.btn_toggle');
+        const btnReset = document.querySelector('.btn--reset');
+        const btnBgGray = document.querySelector('.btn--bggray');
+        const btnWorks = document.querySelector('.btn--works');
+        const btnContact = document.querySelector('.btn--contact');
+        const bgContainer = document.querySelector('.bg--img');
+
+        btnToggle.addEventListener('click', function()  {
+            bgContainer.classList.remove('bg__img--show');
+            document.body.classList.remove('bgcolor--gray', 'bg__img' );
+            document.body.classList.toggle('bgcolor--blue');
+            home.scrollIntoView({behavior:"smooth", block:"start"});
+        });
+        
+        btnReset.addEventListener('click', function()  {
+            bgContainer.classList.remove('bg__img--show');
+            document.body.classList.remove('bgcolor--blue', 'bgcolor--gray', 'bg__img' );
+            about.scrollIntoView({behavior:"smooth", block:"start"});
+        });
+        btnWorks.addEventListener('click', function() {
+            bgContainer.classList.remove('bg__img--show');
+            document.body.classList.remove('bgcolor--blue', 'bgcolor--gray', 'bg__img' );
+            works.scrollIntoView({behavior:"smooth", block:"start"});
+        });
+        btnBgGray.addEventListener('click', function() {
+            bgContainer.classList.remove('bg__img--show');
+            document.body.classList.add('bgcolor--gray');
+            skills.scrollIntoView({behavior:"smooth", block:"start"});
+        });
+        
+
+        btnContact.addEventListener('click',function() {
+            bgContainer.classList.add('bg__img--show');
+            document.body.classList.remove('bgcolor--blue', 'bgcolor--gray', 'bg__img' );
+        });
+
+        const navContainer = document.querySelector('.btns')
+        document.addEventListener('scroll' , function(){
+            // console.log(window.screenY);
+            if (window.scrollY > 100 ) {
+                navContainer.classList.add('bgshow');
+            } else {
+                navContainer.classList.remove('bgshow');
+            }
+        });
+        
+        btnContact.addEventListener('click', function () {
+            home.scrollIntoView({behavior:"smooth", block:"start"});
+        });
+        
+        const arrowUp = document.querySelector('.arrow-up');
+        document.addEventListener('scroll', function() {
+            if ( window.scrollY > 80) {
+                arrowUp.classList.add('visible');
+            } else {
+                arrowUp.classList.remove('visible');
+            }
+        });
+    
+        arrowUp.addEventListener('click', function () {
+            home.scrollIntoView({behavior:"smooth", block:"start"});
+        });
+    </script>
+
+</body>
+</html>
